@@ -1,0 +1,13 @@
+{
+    "title": "Autómata de Pila",
+    "history": "Historial",
+    "languages": "Idiomas",
+    "languages-option": {
+        "en": "Inglés",
+        "es": "Español",
+        "jp": "Japonés"
+    },
+    "word": "Validar",
+    "automaton": "Automata",
+    "pushdown": "pila"
+}

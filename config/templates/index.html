@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/slider.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/input.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='assets/aire.ico') }}">
-    <script src="static/scripts/translations.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts/translations.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/input.js') }}"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -16,7 +18,12 @@
             <p id="pushdown" class="pila">pushdown</p></a>
         <div class="nav-links">
             <ul>
-                <li id="history"><a href="#">History</a></li>
+                <li id="history"><a href="#">History</a>
+                    <ul id="history_list">
+
+                    </ul>
+                </li>
+
                 <li id="languages" class="dropdown">
                     <a href="#">Languages</a>
                     <div id="language-dropdown" class="language-dropdown">
@@ -29,7 +36,6 @@
                 </li>                        
             </ul>
         </div>
-        <img src="{{ url_for('static', filename='assets/bx-menu.svg') }}" alt="menu hamburger" class="menu-hamburger">
     </nav>
     <header>
         <div class="content">
@@ -67,9 +73,16 @@
                     <input type="text" id="input-word" required />
                     <label data-translate="word">Validate</label>
                 </div>
+                <div class="buttondiv">
+                    <button
+                      type="button"
+                      id="add-word"
+                      class="button"
+                    >
+                    </button>
+                </div>
             </div>
         </div>
     </header>
-    <script src="static/scripts/translations.js"></script>
 </body>
 </html>

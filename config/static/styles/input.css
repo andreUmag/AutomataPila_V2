@@ -42,3 +42,12 @@
     border-radius: 5px;
     background: #F2F2F2;
   }
+
+  
+.button {
+  background-color: black;
+  border: none;
+  padding: 20px 20px;
+  margin: 10px;
+  border-radius: 5px;
+}

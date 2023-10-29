@@ -8,11 +8,9 @@ ma = Marshmallow(app)
 class Registers(db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     word = db.Column(db.String(300), nullable=False)
-    date = db.Column(db.Date, nullable=False)
-    
-    def __init__(self, word, date): 
+      
+    def __init__(self, word): 
         self.word = word
-        self.date = date
         
 class RegistersSchema(ma.SQLAlchemyAutoSchema):
     class Meta:

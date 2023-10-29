@@ -28,7 +28,7 @@ def delete_comment(id):
         db.session.delete(register)
         db.session.commit()
         
-        return jsonify({"error":"Registro eliminado correctamente xd"}),200
+        return jsonify({"WOU":"Registro eliminado correctamente xd"}),200
     except Exception as e:
         db.session.rollback()
         return jsonify({"error":"Error al eliminar el registro","details":str(e)}),500

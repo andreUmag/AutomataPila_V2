@@ -45,13 +45,6 @@
     font-weight: 600;
 }
 
-.navbar .menu-hamburger{
-    display: none;
-    width: 35px;
-    position: absolute;
-    top: 40px;
-    right: 30px;
-}
 
 .language-dropdown {
     display: none;
@@ -86,3 +79,25 @@
 .dropdown:hover .language-dropdown {
     display: block;
 }
+
+#history_list {
+    align-items: center;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    width: 100px;
+    list-style: none;
+    text-align: center; 
+    border-radius: 0 0 10px 10px;
+  }
+
+  #history_list li {
+    margin: 5px 0;
+    align-items: center;
+    display: flex;
+  }
+
+  #history:hover #history_list {
+    display: block;
+  }

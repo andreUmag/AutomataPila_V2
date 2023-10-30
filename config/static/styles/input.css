@@ -44,10 +44,36 @@
   }
 
   
-.button {
+/* .button {
   background-color: black;
   border: none;
   padding: 20px 20px;
   margin: 10px;
   border-radius: 5px;
+} */
+
+.button {
+  margin: 12px;
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #A61B1B;
+  transition: all 0.2s ease;
+}
+.button:active {
+  transform: scale(0.96);
+}
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
 }

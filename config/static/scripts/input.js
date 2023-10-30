@@ -26,18 +26,27 @@ $(document).ready(function(){
     })
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
+    // Cuando se hace clic en el enlace "History"
+    $("#history a").click(function (e) {
+      e.preventDefault(); // Evita que el enlace recargue la página
+
+      // Muestra u oculta la lista desplegable
+      $("#history_list").slideToggle();
+    });
+
+    // Hacer una solicitud AJAX y agregar elementos a la lista
     $.ajax({
-        url:'/get',
-        type:'GET',
-        success: function(registers){
-            registers.forEach(function(register){
-                var comentHTML = '<li class="list-register">'+register.word+'</li>'
-                $("#history_list").append(comentHTML);    
-            })
-        },
-        error: function(error){
-            console.error("error")
-        }
-    })
-}); 
+      url: '/get',
+      type: 'GET',
+      success: function (registers) {
+        registers.forEach(function (register) {
+          var comentHTML = '<li class="list-register">' + register.word + '</li>';
+          $("#history_list").append(comentHTML);
+        });
+      },
+      error: function (error) {
+        console.error("Error");
+      }
+    });
+  });

@@ -27,15 +27,11 @@ $(document).ready(function(){
 });
 
 $(document).ready(function () {
-    // Cuando se hace clic en el enlace "History"
     $("#history a").click(function (e) {
-      e.preventDefault(); // Evita que el enlace recargue la página
-
-      // Muestra u oculta la lista desplegable
+      e.preventDefault();
       $("#history_list").slideToggle();
     });
 
-    // Hacer una solicitud AJAX y agregar elementos a la lista
     $.ajax({
       url: '/get',
       type: 'GET',

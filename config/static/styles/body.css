@@ -64,24 +64,6 @@ header{
     border-radius: 10px;
   }
 
-.pilita{
-    width: 100%;
-    height: 385px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    background-color: #c2d9bf7e;
-    border-radius: 5px;
-}
-
-.slider{
-    width: 100%;
-    height: 50px;
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
-}
-
 .graf-int{
     overflow: hidden;
     display: block;

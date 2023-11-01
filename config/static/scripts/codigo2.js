@@ -4,10 +4,26 @@ function opp() {
   unpaint();
   var tour = [];
   var tour2 = [];
-  if (check_word(text, 0, 1)){
-    console.log(true) 
-  } else {
-    console.log(false)
+
+  if (text.length % 2 == 0) {
+    if (check_word(text, 0, 1)){
+      tour3=[1];
+      for(var i=0; i<text.length/2; i++){
+        tour3.push(1);
+      }
+      for(var i=0; i<text.length/2; i++){
+        tour3.push(2);
+      }
+      tour3.push(3);
+      paint_tour(tour3, 0, 500, 0);
+      alert("La palabra es palindromo");
+      console.log(true) 
+    } else {
+      alert("La palabra no es palindromo");
+      console.log(false)
+    }
+  }else {
+    alert("La cadena debe tener un numero par de caracteres");
   }
   tour3=[1];
   for(var i=0; i<text.length/2; i++){
@@ -19,7 +35,9 @@ function opp() {
   tour3.push(3);
 
 
-  paint_tour(tour3, 0, 500, 0);
+if(text.length % 2 == 0){
+  
+}
 
   function paint_tour(tour, index ,speed, index2){
     node = myDiagram.findNodeForKey(tour[index]);

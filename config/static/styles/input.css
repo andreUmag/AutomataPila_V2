@@ -74,6 +74,6 @@
   left: 50%;
   height: 100%;
   transform: translateX(-50%);
-  z-index: -1000;
+  z-index: -100;
   background-repeat: no-repeat;
 }

@@ -90,6 +90,7 @@
     list-style: none;
     text-align: center; 
     border-radius: 0 0 10px 10px;
+    z-index: 9999;
   }
 
   #history_list li {

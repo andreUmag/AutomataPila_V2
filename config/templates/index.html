@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Pushdown Automaton</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/body.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/menu.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/slider.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/input.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='assets/aire.ico') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/body.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/menu.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/slider.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/input.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='assets/aire.ico') }}"
+    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ url_for('static', filename='scripts/translations.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/input.js') }}"></script>
@@ -14,41 +29,49 @@
     <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/codigo2.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/go.js') }}"></script>
-  <script src="{{ url_for('static', filename='scripts/graf.js') }}"></script>
-</head>
-<body>
+    <script src="{{ url_for('static', filename='scripts/graf.js') }}"></script>
+  </head>
+  <body>
     <nav class="navbar">
-        <a href="#" class="logo">
-            <p id="automaton">Automaton</p>
-            <p id="pushdown" class="pila">pushdown</p></a>
-        <div class="nav-links">
-            <ul>
-                <li id="history"><a href="#">History</a>
-                    <ul id="history_list">
+      <a href="#" class="logo">
+        <p id="automaton">Automaton</p>
+        <p id="pushdown" class="pila">pushdown</p></a
+      >
+      <div class="nav-links">
+        <ul>
+          <li id="history">
+            <a href="#">History</a>
+            <ul id="history_list"></ul>
+          </li>
 
-                    </ul>
-                </li>
-
-                <li id="languages" class="dropdown">
-                    <a href="#">Languages</a>
-                    <div id="language-dropdown" class="language-dropdown">
-                        <ul class="language-list">
-                            <li><a href="#" data-lang="en">English</a></li>
-                            <li><a href="#" data-lang="es">Spanish</a></li>
-                            <li><a href="#" data-lang="jp">Japanese</a></li>
-                        </ul>
-                    </div>
-                </li>                        
-            </ul>
-        </div>
+          <li id="languages" class="dropdown">
+            <a href="#">Languages</a>
+            <div id="language-dropdown" class="language-dropdown">
+              <ul class="language-list">
+                <li><a href="#" data-lang="en">English</a></li>
+                <li><a href="#" data-lang="es">Spanish</a></li>
+                <li><a href="#" data-lang="jp">Japanese</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
     <header>
-        <div class="content">
-            <div class="ouput-values">
-                <div class="graf">
-                    <div id="sample">
-                        <div id="myDiagramDiv" style="border: solid 1px black; width: 100%; height: 460px; background: whitesmoke"></div>
-                          <textarea id="mySavedModel" hidden>
+      <div class="content">
+        <div class="ouput-values">
+          <div class="graf">
+            <div id="sample">
+              <div
+                id="myDiagramDiv"
+                style="
+                  border: solid 1px black;
+                  width: 100%;
+                  height: 460px;
+                  background: whitesmoke;
+                "
+              ></div>
+              <textarea id="mySavedModel" hidden>
                             { "class": "go.GraphLinksModel",
                             "nodeKeyProperty": "id",
                             "nodeDataArray": [
@@ -67,29 +90,24 @@
                               { "from": 2, "to": 3,  "pila": ["λ,#/#"], "category":"link2" }
                             ]
                           }
-                        </textarea>
-                        </div>
-                        <div id="myDiagramDiv" style="width: 600px; height: 400px;"></div>
-                </div>
+                        </textarea
+              >
             </div>
-            <div class="input-values">
-                <div class="input-field">
-                    <input type="text" id="input-word" required />
-                    <label data-translate="word">Validate</label>
-                </div>
-                <div class="buttondiv">
-                    <input
-                      onclick="opp()"
-                      type="button"
-                      id="add-word"
-                      class="button"
-                      
-                    >
-                    Send
-                </input>
-                </div>
-            </div>
+            <div id="myDiagramDiv" style="width: 600px; height: 400px"></div>
+          </div>
         </div>
+        <div class="input-values">
+          <div class="input-field">
+            <input type="text" id="input-word" required />
+            <label data-translate="word">Validate</label>
+          </div>
+          <div class="buttondiv">
+            <button onclick="opp()" type="button" id="add-word" class="button">
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
-</body>
+  </body>
 </html>

@@ -1,6 +1,6 @@
 
 function opp() {
-  var text = document.getElementById("verificar2").value;
+  var text = document.getElementById("input-word").value;
   unpaint();
   var tour = [];
   var tour2 = [];
